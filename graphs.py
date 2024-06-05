@@ -297,6 +297,7 @@ def corr_plot(sp,tw):
     matrix = np.triu(corr)
     ax = sns.heatmap(
         round(corr,3),
+        mask = matrix,
         vmin=-1, vmax=1, center=0,
         cmap="YlGnBu",annot=True,annot_kws={"fontsize":8}, fmt=".2",
         square=True
